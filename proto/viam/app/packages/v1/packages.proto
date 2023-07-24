@@ -62,12 +62,13 @@ message PackageInfo {
   optional string platform = 7;
   repeated FileInfo files = 5;
   google.protobuf.Struct metadata = 6;
+  string blob_type = 8; // a.k.a. archive file extension (e.g. tar.gz, .txz)
 }
 
 message CreatePackageRequest {
   oneof package {
     PackageInfo info = 1;
-    // .tar.gz file
+    // archive file
     bytes contents = 2;
   }
 }
