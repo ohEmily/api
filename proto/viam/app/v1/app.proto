@@ -844,6 +844,8 @@ message ModuleFileInfo {
   string version = 2;
   // The platform that the file is built to run on
   string platform = 3;
+  // The full filename (including any file extension) on the user's filesystem
+  string filename = 5;
 }
 
 message UploadModuleFileRequest {
